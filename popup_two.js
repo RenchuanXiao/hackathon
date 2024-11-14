@@ -10,7 +10,7 @@ document.getElementById('ungroup').addEventListener('click', () => {
 document.getElementById('notification_submit').addEventListener('click', () => {
     var time = document.getElementById('notification_time').value;
     var text = document.getElementById('notification_text').value;
-    setTimeout(() => {new Notification('Time is up!', {body: text})}, time);
+    setTimeout(() => {new Notification('Time is up!', {body: text, icon: "icons/alarm36.png"})}, time * 1000);
 });
 
 function sortTabs() {
