@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "HTTP/HTTPS 代理转发器",
+  "version": "1.0",
+  "description": "将 HTTP/HTTPS 请求代理转发到本地服务器",
+  "permissions": [
+    "proxy",
+    "storage",
+    "tabs",
+    "tabGroups",
+    "activeTab",
+    "notifications",
+    "webRequest",
+    "webRequestAuthProvider"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "*://localhost/*",
+    "*://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/toolbox16.png",
+      "48": "icons/toolbox48.png",
+      "128": "icons/toolbox128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/toolbox16.png",
+    "48": "icons/toolbox48.png",
+    "128": "icons/toolbox128.png"
+  }
+  
+} 

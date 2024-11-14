@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 400px; padding: 10px; }
+    .form-group { margin-bottom: 10px; }
+    .rule-item { 
+      display: flex; 
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .rule-item input { 
+      flex: 1;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+    .delete-btn {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset style="border: 0px;">
+      <input id="sort" type="submit" value="sort" style="width: 100px;"/>
+    </fieldset>
+    <fieldset style="border: 0px;">
+      <input id="group" type="submit" value="group" style="width: 100px;" />
+    </fieldset>
+    <fieldset style="border: 0px;">
+      <input id="ungroup" type="submit" value="ungroup" style="width: 100px;" />
+    </fieldset>
+  </form>
+  <h3>请求转发规则配置</h3>
+  <div id="rulesList"></div>
+  <div class="buttons">
+    <button id="addRule">添加规则</button>
+    <button id="save">保存配置</button>
+    <button id="toggle">启用/禁用转发</button>
+  </div>
+  <h3>通知</h3>
+  <form>
+    <label for="time"></label>
+    <input id="notification_time" type="number" name="time" step="1" min="0"><br><br>
+    <label for="text">文字：</label>
+    <textarea id="notification_text" rows="4" cols="50"></textarea><br><br>
+    <button id="notification_submit">提交</button>
+  </form>
+  <script src="popup_one.js"></script>
+  <script src="popup_two.js"></script>
+</body>
+</html> 
